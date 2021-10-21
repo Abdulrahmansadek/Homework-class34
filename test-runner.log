@@ -1,0 +1,62 @@
+2021-10-21 10:16:53 info: ----------------------------------------------
+2021-10-21 10:16:53 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2021-10-21 10:16:53 info: ----------------------------------------------
+2021-10-21 10:16:55 info: All unit tests passed.
+2021-10-21 10:16:56 info: All steps were completed successfully
+2021-10-21 10:17:24 info: ----------------------------------------
+2021-10-21 10:17:24 info: >>> Running Unit Test `ex2-dogYears` <<<
+2021-10-21 10:17:24 info: ----------------------------------------
+2021-10-21 10:17:25 info: All unit tests passed.
+2021-10-21 10:17:26 info: All steps were completed successfully
+2021-10-21 10:18:42 info: -------------------------------------------
+2021-10-21 10:18:42 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-10-21 10:18:42 info: -------------------------------------------
+2021-10-21 10:18:43 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+
+2021-10-21 10:18:46 info: Disclaimer turned off
+2021-10-21 10:18:50 info: -------------------------------------------
+2021-10-21 10:18:50 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-10-21 10:18:50 info: -------------------------------------------
+2021-10-21 10:18:52 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+
+2021-10-21 10:21:05 info: -------------------------------------------
+2021-10-21 10:21:05 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-10-21 10:21:05 info: -------------------------------------------
+2021-10-21 10:21:06 info: All unit tests passed.
+2021-10-21 10:21:07 info: All steps were completed successfully
+2021-10-21 10:21:44 info: --------------------------------------------
+2021-10-21 10:21:44 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2021-10-21 10:21:44 info: --------------------------------------------
+2021-10-21 10:21:44 warn: A unit test file was not provided.
+2021-10-21 10:21:45 info: All steps were completed successfully
+2021-10-21 10:22:13 info: ------------------------------------------------
+2021-10-21 10:22:13 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2021-10-21 10:22:13 info: ------------------------------------------------
+2021-10-21 10:22:13 warn: A unit test file was not provided.
+2021-10-21 10:22:14 info: All steps were completed successfully
+2021-10-21 10:26:04 info: -----------------------------------------
+2021-10-21 10:26:04 info: >>> Running Unit Test `ex6-totalCost` <<<
+2021-10-21 10:26:04 info: -----------------------------------------
+2021-10-21 10:26:04 warn: A unit test file was not provided.
+2021-10-21 10:26:05 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  33:12  warning  'grocery' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-10-21 10:26:28 info: -----------------------------------------
+2021-10-21 10:26:28 info: >>> Running Unit Test `ex6-totalCost` <<<
+2021-10-21 10:26:28 info: -----------------------------------------
+2021-10-21 10:26:28 warn: A unit test file was not provided.
+2021-10-21 10:26:29 info: All steps were completed successfully
+2021-10-21 10:30:16 info: -------------------------------------------
+2021-10-21 10:30:16 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2021-10-21 10:30:16 info: -------------------------------------------
+2021-10-21 10:30:16 warn: A unit test file was not provided.
+2021-10-21 10:30:17 info: All steps were completed successfully
