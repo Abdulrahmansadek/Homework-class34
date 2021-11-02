@@ -1,0 +1,175 @@
+2021-11-02 06:24:37 info: ----------------------------------------
+2021-11-02 06:24:37 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-11-02 06:24:37 info: ----------------------------------------
+2021-11-02 06:24:41 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    ✕ HTML should be syntactically valid (84 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (3 ms)
+    ✓ should contain a <ul> with 3 <li> elements (1 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (1 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      10:236  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:425  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:605  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)·
+    More information:
+      https://html-validate.org/rules/wcag/h37.html·
+    "
+
+      44 |   const report = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(report);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:39:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.83 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+
+2021-11-02 06:26:18 info: ---------------------------------------
+2021-11-02 06:26:18 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-02 06:26:18 info: ---------------------------------------
+2021-11-02 06:26:22 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✕ should be syntactically valid (98 ms)
+    ✓ the body font-family should be `Arial, sans-serif` (1 ms)
+    ✓ each <li> should have the CSS class `list-item` (2 ms)
+    ✓ each <li> should rendered red (52 ms)
+
+  ● Generated HTML › should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      25:2  error  <img> is missing required \"alt\" attribute  wcag/h37
+      25:2  error  Attribute \"src\" has invalid value \"\"       attribute-allowed-values·
+    ✖ 2 problems (2 errors, 0 warnings)·
+    More information:
+      https://html-validate.org/rules/wcag/h37.html
+      https://html-validate.org/rules/attribute-allowed-values.html·
+    "
+
+      44 |   const report = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(report);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:13:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        2.773 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+
+2021-11-02 06:26:23 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:21:27 - Unknown word (Abdulrahman)
+
+2021-11-02 06:27:20 info: --------------------------------------------
+2021-11-02 06:27:20 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2021-11-02 06:27:20 info: --------------------------------------------
+2021-11-02 06:27:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    ✓ HTML should be syntactically valid (63 ms)
+    ✕ should have all TODO comments removed (5 ms)
+    ✓ should use `setInterval()`
+    ✓ should not call `setInterval()` more than once (2003 ms)
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● whatsTheTime › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:44:55)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.784 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+
+2021-11-02 06:28:17 info: ---------------------------------------
+2021-11-02 06:28:17 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-11-02 06:28:17 info: ---------------------------------------
+2021-11-02 06:28:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (77 ms)
+    ✕ should have all TODO comments removed (6 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:40:55)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.751 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+
+2021-11-02 06:28:57 info: ------------------------------------------
+2021-11-02 06:28:57 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-11-02 06:28:57 info: ------------------------------------------
+2021-11-02 06:28:58 info: All unit tests passed.
+2021-11-02 06:28:59 info: All steps were completed successfully
