@@ -19,19 +19,8 @@ div.style.margin = 'auto';
 div.style.padding = 'auto';
 function addCurrentTime() {
   const today = new Date();
-  const hours = today.getHours();
-  const minutes = today.getMinutes();
-  const seconds = today.getSeconds();
-
-  if (seconds < 10) {
-    div.textContent = `${hours}  :  ${minutes} : 0${seconds}`;
-  } else if (minutes < 10) {
-    div.textContent = `${hours}  :  0${minutes} : ${seconds}`;
-  } else {
-    div.textContent = `${hours} :  ${minutes}  :  ${seconds}  `;
-  }
+  const currentTime = today.toLocaleTimeString();
+  div.textContent = currentTime;
 }
 setInterval(addCurrentTime, 1000);
 window.addEventListener('load', addCurrentTime);
-
-// TODO execute `addCurrentTime` when the browser has completed loading the page

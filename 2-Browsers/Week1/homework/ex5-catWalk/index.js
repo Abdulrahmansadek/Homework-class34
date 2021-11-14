@@ -28,13 +28,12 @@ walkingCat.style.left = left + 'px';
 walkingCat.style.width = width + 'px';
 
 function catWalk() {
-  //call an inner  function with setInterval
   let walk = setInterval(walkBreakPoints, 50);
-  // make another function to set all the walking breakpoints
+
   function walkBreakPoints() {
     const windowWidth = parseInt(window.innerWidth);
     const halfOfTheScreen = parseInt(windowWidth / 2);
-    //stop at the middle for 5 seconds
+
     if (
       left + width >= halfOfTheScreen &&
       left + width <= halfOfTheScreen + 10
@@ -49,18 +48,13 @@ function catWalk() {
           'http://www.anniemation.com/clip_art/images/cat-walk.gif';
         walk = setInterval(walkBreakPoints, 50);
       }, 5000);
-      //reset the left at the end
     } else if (left >= windowWidth - 10 && left <= windowWidth) {
       left = 0;
-
-      //normal situation
     } else {
       left += 10;
       walkingCat.style.left = left + 'px';
     }
   }
 }
-
-// TODO execute `catWalk` when the browser has completed loading the page
 
 window.addEventListener('load', catWalk);
