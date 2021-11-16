@@ -45,12 +45,12 @@ describe('sanitizeFruitBasket', () => {
     // Save the original contents of the fruit basket
     const originalFruitBasketContents = [...fruitBasket];
     sanitizeFruitBasket(fruitBasket, 'lemon');
-    expect(originalFruitBasketContents).toBe(fruitBasket);
+    expect(originalFruitBasketContents).toEqual(fruitBasket);
   });
 
   test('should return a new array that does not include the unwanted `lemon`', () => {
     const result = sanitizeFruitBasket(fruitBasket, 'lemon');
     const expected = ['apple', 'grapefruit', 'banana', 'watermelon'];
-    expect(result).toBe(expected);
+    expect(result).toEqual(expected);
   });
 });
