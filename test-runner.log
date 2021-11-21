@@ -55,3 +55,20 @@ Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
 2021-11-21 09:47:42 info: ----------------------------------------------
 2021-11-21 09:47:44 info: All unit tests passed.
 2021-11-21 09:47:45 info: All steps were completed successfully
+2021-11-21 09:52:47 info: --------------------------------------------
+2021-11-21 09:52:47 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-21 09:52:47 info: --------------------------------------------
+2021-11-21 09:52:48 error: *** Unit Test Error Report ***
+
+  console.log
+    Resolved! [ 1, 2, 3, 4, 5 ]
+
+      at 3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:39:30
+
+
+2021-11-21 09:53:41 info: Disclaimer turned off
+2021-11-21 09:53:48 info: --------------------------------------------
+2021-11-21 09:53:48 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-21 09:53:48 info: --------------------------------------------
+2021-11-21 09:53:50 info: All unit tests passed.
+2021-11-21 09:53:51 info: All steps were completed successfully
