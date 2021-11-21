@@ -17,14 +17,25 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 function rollTheDices() {
   const results = [];
 
-  // TODO: expand the chain to include five dices
   return rollDice(1)
     .then((value) => {
       results.push(value);
       return rollDice(2);
     })
-    .then((value) => {
-      results.push(value);
+    .then((first) => {
+      results.push(first);
+      return rollDice(3);
+    })
+    .then((second) => {
+      results.push(second);
+      return rollDice(4);
+    })
+    .then((third) => {
+      results.push(third);
+      return rollDice(5);
+    })
+    .then((fourth) => {
+      results.push(fourth);
       return results;
     });
 }
