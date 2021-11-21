@@ -1,0 +1,57 @@
+2021-11-21 09:45:13 info: ---------------------------------------
+2021-11-21 09:45:13 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-21 09:45:13 info: ---------------------------------------
+2021-11-21 09:45:17 info: All unit tests passed.
+2021-11-21 09:45:18 info: All steps were completed successfully
+2021-11-21 09:45:44 info: -------------------------------------------------
+2021-11-21 09:45:44 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-11-21 09:45:44 info: -------------------------------------------------
+2021-11-21 09:45:46 info: All unit tests passed.
+2021-11-21 09:45:47 info: All steps were completed successfully
+2021-11-21 09:46:17 info: ----------------------------------------
+2021-11-21 09:46:17 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-11-21 09:46:17 info: ----------------------------------------
+2021-11-21 09:46:19 info: All unit tests passed.
+2021-11-21 09:46:20 info: All steps were completed successfully
+2021-11-21 09:46:41 info: --------------------------------------------
+2021-11-21 09:46:41 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-21 09:46:41 info: --------------------------------------------
+2021-11-21 09:46:43 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✕ should use `dices.map()` (2 ms)
+    ✓ should use `Promise.all()`
+    ✓ should resolve when all dices settle successfully (5 ms)
+    ✓ should reject with an Error when a dice rolls off the table (4 ms)
+
+  ● ex4-pokerDiceAll › should use `dices.map()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      37 |
+      38 |   test('should use `dices.map()`', () => {
+    > 39 |     expect(state.dicesMap).toBeDefined();
+         |                            ^
+      40 |   });
+      41 |
+      42 |   test('should use `Promise.all()`', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:39:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.881 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+
+2021-11-21 09:47:42 info: ----------------------------------------------
+2021-11-21 09:47:42 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2021-11-21 09:47:42 info: ----------------------------------------------
+2021-11-21 09:47:44 info: All unit tests passed.
+2021-11-21 09:47:45 info: All steps were completed successfully
