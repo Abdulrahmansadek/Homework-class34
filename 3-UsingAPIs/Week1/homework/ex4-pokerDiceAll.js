@@ -40,3 +40,9 @@ rollTheDices()
 
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+/*
+Explanation
+we get `Dice ${dice} is now ${side}` && `Dice ${dice} continues rolling on the floor...` after the reject message 
+ which means that the function continue executing until all the promises are handled,
+ but the call of resolve or reject are ignored after getting the first reject call.  */

@@ -47,3 +47,19 @@ rollDice()
   .catch((error) => console.log(error.message));
 // ! Do not change or remove the code below
 module.exports = rollDice;
+
+/*
+Explanation 
+The problem doesn't occur.
+In the callback function , we get an error message in the first condition '(roll>6)' but the set timeout doesn't stop
+and it continue executing until the condition will be false, 
+witch is in our case (roll < randomRollsToDo)
+so the last call of rollDice() is when (roll === randomRollsToDo) which is also the condition of the success callback function.
+and then we get  success message after an error message when the randomRollsToDo's is more than 6.
+we can fix that with adding 'return' 
+if (roll > 6) {
+    callback(new Error('Oops... Dice rolled off the table.'));
+      return;
+    }
+
+*/
