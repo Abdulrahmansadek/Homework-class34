@@ -22,18 +22,66 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/';
+  const data = await fetchData(url);
+  const pokemons = data.results;
+  const list = document.querySelector('.select-list');
+  list.textContent = '';
+  const userList = (event) => {
+    pokemons.forEach((pokemon) => {
+      if (pokemon.name === event.target.value) {
+        fetchImage(pokemon.url);
+      }
+    });
+  };
+  list.addEventListener('change', userList);
+
+  const option = document.createElement('option');
+  option.textContent = 'Select one Pokemon';
+  list.appendChild(option);
+
+  pokemons.forEach((pokemon) => {
+    const option = document.createElement('option');
+    option.value = pokemon.name;
+    option.textContent = ` ${pokemon.name}`;
+    list.appendChild(option);
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url) {
+  const data = await fetchData(url);
+  const imgUrl = data.sprites.front_default;
+  const img = document.createElement('img');
+  const imagesContainer = document.querySelector('.images-container');
+  imagesContainer.textContent = '';
+  img.src = imgUrl;
+  imagesContainer.appendChild(img);
 }
 
 function main() {
-  // TODO complete this function
+  const btn = document.createElement('button');
+  const selectList = document.createElement('select');
+  const imagesContainer = document.createElement('div');
+  imagesContainer.classList.add('images-container');
+  selectList.classList.add('select-list');
+  btn.setAttribute('type', 'submit');
+  btn.textContent = 'Get Pokemon';
+  btn.addEventListener('click', () => {
+    fetchAndPopulatePokemons();
+  });
+
+  document.body.append(imagesContainer, btn, selectList);
 }
+
+window.addEventListener('load', main);
